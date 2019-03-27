@@ -1,0 +1,6 @@
+module YoutubeKit [system] {
+  umbrella header "YoutubeKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

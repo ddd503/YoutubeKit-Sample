@@ -1,0 +1,16 @@
+PODS:
+  - YoutubeKit (0.2.3)
+
+DEPENDENCIES:
+  - YoutubeKit
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - YoutubeKit
+
+SPEC CHECKSUMS:
+  YoutubeKit: 7daf33f208f40bf5c3fe8966b918d52723667258
+
+PODFILE CHECKSUM: 82f9c52ad35357b3a101227f721efdb074313053
+
+COCOAPODS: 1.5.0

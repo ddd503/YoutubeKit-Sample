@@ -1,0 +1,6 @@
+module Pods_YoutubeKit_Sample [system] {
+  umbrella header "Pods-YoutubeKit-Sample-umbrella.h"
+
+  export *
+  module * { export * }
+}
