@@ -1,4 +1,4 @@
-module Pods_YoutubeKit_Sample [system] {
+framework module Pods_YoutubeKit_Sample {
   umbrella header "Pods-YoutubeKit-Sample-umbrella.h"
 
   export *

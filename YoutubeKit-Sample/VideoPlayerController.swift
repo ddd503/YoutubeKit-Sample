@@ -6,4 +6,6 @@
 //  Copyright © 2019 kawaharadai. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+final class VideoPlayerController: UIViewController {}

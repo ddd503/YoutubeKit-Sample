@@ -1,6 +1,10 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
+## Keys
+
+MIT LICENSE Found in the repo
+
 ## YoutubeKit
 
 Copyright (c) 2017 rinov <rinov@rinov.jp>

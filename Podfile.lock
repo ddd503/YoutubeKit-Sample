@@ -1,16 +1,23 @@
 PODS:
-  - YoutubeKit (0.2.3)
+  - Keys (1.0.1)
+  - YoutubeKit (0.3.0)
 
 DEPENDENCIES:
+  - Keys (from `Pods/CocoaPodsKeys`)
   - YoutubeKit
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - YoutubeKit
 
-SPEC CHECKSUMS:
-  YoutubeKit: 7daf33f208f40bf5c3fe8966b918d52723667258
+EXTERNAL SOURCES:
+  Keys:
+    :path: Pods/CocoaPodsKeys
 
-PODFILE CHECKSUM: 82f9c52ad35357b3a101227f721efdb074313053
+SPEC CHECKSUMS:
+  Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
+  YoutubeKit: a00e9eebcb3cfe26d7e233c5f8591dfd0b08f7a0
+
+PODFILE CHECKSUM: 786666d29b13c6d0bb068b05263742e3ddbddb81
 
 COCOAPODS: 1.5.0
