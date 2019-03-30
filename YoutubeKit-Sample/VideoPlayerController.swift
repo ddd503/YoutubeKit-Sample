@@ -19,7 +19,7 @@ final class VideoPlayerController: UIViewController {
         // Create a new player
         player = YTSwiftyPlayer(
             frame: CGRect(x: 0, y: 0, width: 640, height: 480),
-            playerVars: [.videoID("videoID-abcde")])
+            playerVars: [.videoID("mQLK6c5vOHM")])
 
         // Enable auto playback when video is loaded
         player.autoplay = true
@@ -32,6 +32,8 @@ final class VideoPlayerController: UIViewController {
 
         // Load the video.
         player.loadPlayer()
+
+        DataStore.request()
     }
 
 }
