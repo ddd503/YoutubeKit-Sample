@@ -13,6 +13,7 @@ class VideoListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        DataStore.request()
         // Do any additional setup after loading the view.
     }
     

@@ -12,7 +12,7 @@ final class DataStore {
 
     static func request() {
         // Get youtube chart ranking
-        let request = VideoListRequest(part: [.id, .statistics], filter: .chart)
+        let request = VideoListRequest(part: [.id, .statistics], filter: .chart, maxResults: 10)
 
         // Send a request.
         ApiSession.shared.send(request) { result in
