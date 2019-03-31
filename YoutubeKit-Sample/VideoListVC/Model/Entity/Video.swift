@@ -1,5 +1,5 @@
 //
-//  VideoInfo.swift
+//  Video.swift
 //  YoutubeKit-Sample
 //
 //  Created by kawaharadai on 2019/03/30.

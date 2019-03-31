@@ -7,25 +7,26 @@
 //
 
 import UIKit
+import YoutubeKit
 
-class VideoListViewController: UIViewController {
+final class VideoListViewController: UIViewController {
+
+    private let dataStore = VideoInfoDataStore()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        DataStore.request()
-        // Do any additional setup after loading the view.
+        dataStore.delegate = self
+        dataStore.request()
     }
-    
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension VideoListViewController: VideoInfoDataStoreDelegate {
+    func dataStore(didReceiveResponse response: VideoListRequest.Response) {
+        print(response.items.count)
     }
-    */
 
+    func dataStore(didReceiveError error: Error) {
+        print(error.localizedDescription)
+    }
 }
