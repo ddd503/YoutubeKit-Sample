@@ -11,7 +11,8 @@ import YoutubeKit
 
 final class VideoListViewController: UIViewController {
 
-    private let dataStore = VideoInfoDataStore()
+    private let dataStore = VideoListDataStore()
+    private var videoList: VideoListRequest.Response?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +22,15 @@ final class VideoListViewController: UIViewController {
 
 }
 
-extension VideoListViewController: VideoInfoDataStoreDelegate {
+extension VideoListViewController: VideoListDataStoreDelegate {
     func dataStore(didReceiveResponse response: VideoListRequest.Response) {
-        print(response.items.count)
+        videoList = response
     }
 
     func dataStore(didReceiveError error: Error) {
-        print(error.localizedDescription)
+        let alert = UIAlertController(title: "データ取得失敗", message: error.localizedDescription, preferredStyle: .alert)
+        let close = UIAlertAction(title: "閉じる", style: .default)
+        alert.addAction(close)
+        present(alert, animated: true)
     }
 }

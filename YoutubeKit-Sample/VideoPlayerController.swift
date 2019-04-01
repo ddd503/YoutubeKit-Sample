@@ -33,7 +33,6 @@ final class VideoPlayerController: UIViewController {
         // Load the video.
         player.loadPlayer()
 
-        DataStore.request()
     }
 
 }
