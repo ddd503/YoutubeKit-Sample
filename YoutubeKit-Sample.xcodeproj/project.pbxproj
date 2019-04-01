@@ -134,7 +134,7 @@
 		45D50468224F650B008B6639 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				45D50474224F6608008B6639 /* DataStore */,
+				45D50475224F664D008B6639 /* VideoListDataStore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,14 +154,6 @@
 				45D5047D224F66D5008B6639 /* VideoPlayerView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		45D50474224F6608008B6639 /* DataStore */ = {
-			isa = PBXGroup;
-			children = (
-				45D50475224F664D008B6639 /* VideoListDataStore.swift */,
-			);
-			path = DataStore;
 			sourceTree = "<group>";
 		};
 		B0DE301D168C4332216D7D0D /* Pods */ = {
