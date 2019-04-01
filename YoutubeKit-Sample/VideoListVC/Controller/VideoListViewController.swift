@@ -11,12 +11,22 @@ import YoutubeKit
 
 final class VideoListViewController: UIViewController {
 
+    @IBOutlet weak private var videoListView: UITableView!
     private let dataStore = VideoListDataStore()
-    private var videoList: VideoListRequest.Response?
+    private var videoList: [Video] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+    }
+
+    private func setup() {
+        videoListView.register(VideoListViewCell.nib(), forCellReuseIdentifier: VideoListViewCell.identifier)
+        videoListView.tableFooterView = UIView()
+        videoListView.dataSource = self
+        videoListView.delegate = self
         dataStore.delegate = self
+        // データソースのリクエスト
         dataStore.request()
     }
 
@@ -24,7 +34,10 @@ final class VideoListViewController: UIViewController {
 
 extension VideoListViewController: VideoListDataStoreDelegate {
     func dataStore(didReceiveResponse response: VideoListRequest.Response) {
-        videoList = response
+        videoList = response.items
+        DispatchQueue.main.async { [weak self] in
+            self?.videoListView.reloadData()
+        }
     }
 
     func dataStore(didReceiveError error: Error) {
@@ -34,3 +47,19 @@ extension VideoListViewController: VideoListDataStoreDelegate {
         present(alert, animated: true)
     }
 }
+
+extension VideoListViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return videoList.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: VideoListViewCell.identifier, for: indexPath) as? VideoListViewCell else {
+            fatalError()
+        }
+        cell.setup(video: videoList[indexPath.row])
+        return cell
+    }
+}
+
+extension VideoListViewController: UITableViewDelegate {}

@@ -14,10 +14,9 @@
 		45D5045C224D18F6008B6639 /* VideoPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D5045B224D18F6008B6639 /* VideoPlayerController.swift */; };
 		45D5046C224F655A008B6639 /* VideoListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D5046B224F655A008B6639 /* VideoListViewController.storyboard */; };
 		45D5046E224F656A008B6639 /* VideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D5046D224F656A008B6639 /* VideoListViewController.swift */; };
-		45D50471224F65F1008B6639 /* VideoInfoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D5046F224F65F1008B6639 /* VideoInfoViewCell.swift */; };
-		45D50472224F65F1008B6639 /* VideoInfoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45D50470224F65F1008B6639 /* VideoInfoViewCell.xib */; };
+		45D50471224F65F1008B6639 /* VideoListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D5046F224F65F1008B6639 /* VideoListViewCell.swift */; };
+		45D50472224F65F1008B6639 /* VideoListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45D50470224F65F1008B6639 /* VideoListViewCell.xib */; };
 		45D50476224F664D008B6639 /* VideoListDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D50475224F664D008B6639 /* VideoListDataStore.swift */; };
-		45D50478224F665C008B6639 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D50477224F665C008B6639 /* Video.swift */; };
 		45D5047A224F668E008B6639 /* PlayVideoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D50479224F668E008B6639 /* PlayVideoViewController.storyboard */; };
 		45D5047C224F669A008B6639 /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D5047B224F669A008B6639 /* PlayVideoViewController.swift */; };
 		45D5047E224F66D5008B6639 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D5047D224F66D5008B6639 /* VideoPlayerView.swift */; };
@@ -34,10 +33,9 @@
 		45D5045B224D18F6008B6639 /* VideoPlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerController.swift; sourceTree = "<group>"; };
 		45D5046B224F655A008B6639 /* VideoListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoListViewController.storyboard; sourceTree = "<group>"; };
 		45D5046D224F656A008B6639 /* VideoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListViewController.swift; sourceTree = "<group>"; };
-		45D5046F224F65F1008B6639 /* VideoInfoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoInfoViewCell.swift; sourceTree = "<group>"; };
-		45D50470224F65F1008B6639 /* VideoInfoViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoInfoViewCell.xib; sourceTree = "<group>"; };
+		45D5046F224F65F1008B6639 /* VideoListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListViewCell.swift; sourceTree = "<group>"; };
+		45D50470224F65F1008B6639 /* VideoListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoListViewCell.xib; sourceTree = "<group>"; };
 		45D50475224F664D008B6639 /* VideoListDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListDataStore.swift; sourceTree = "<group>"; };
-		45D50477224F665C008B6639 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		45D50479224F668E008B6639 /* PlayVideoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlayVideoViewController.storyboard; sourceTree = "<group>"; };
 		45D5047B224F669A008B6639 /* PlayVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
 		45D5047D224F66D5008B6639 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
@@ -127,8 +125,8 @@
 		45D50467224F6509008B6639 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				45D5046F224F65F1008B6639 /* VideoInfoViewCell.swift */,
-				45D50470224F65F1008B6639 /* VideoInfoViewCell.xib */,
+				45D5046F224F65F1008B6639 /* VideoListViewCell.swift */,
+				45D50470224F65F1008B6639 /* VideoListViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -137,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				45D50474224F6608008B6639 /* DataStore */,
-				45D50473224F6604008B6639 /* Entity */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -157,14 +154,6 @@
 				45D5047D224F66D5008B6639 /* VideoPlayerView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		45D50473224F6604008B6639 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				45D50477224F665C008B6639 /* Video.swift */,
-			);
-			path = Entity;
 			sourceTree = "<group>";
 		};
 		45D50474224F6608008B6639 /* DataStore */ = {
@@ -256,7 +245,7 @@
 				45D5047A224F668E008B6639 /* PlayVideoViewController.storyboard in Resources */,
 				454B6DBB224BDD9D00BC1548 /* Assets.xcassets in Resources */,
 				45D5046C224F655A008B6639 /* VideoListViewController.storyboard in Resources */,
-				45D50472224F65F1008B6639 /* VideoInfoViewCell.xib in Resources */,
+				45D50472224F65F1008B6639 /* VideoListViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,9 +302,8 @@
 				454B6DB4224BDD9C00BC1548 /* AppDelegate.swift in Sources */,
 				45D5047C224F669A008B6639 /* PlayVideoViewController.swift in Sources */,
 				45D5047E224F66D5008B6639 /* VideoPlayerView.swift in Sources */,
-				45D50471224F65F1008B6639 /* VideoInfoViewCell.swift in Sources */,
+				45D50471224F65F1008B6639 /* VideoListViewCell.swift in Sources */,
 				45D50476224F664D008B6639 /* VideoListDataStore.swift in Sources */,
-				45D50478224F665C008B6639 /* Video.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

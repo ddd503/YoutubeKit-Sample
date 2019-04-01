@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xbD-C7-SVt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NVp-VB-ftq">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,20 +10,54 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Video List View Controller-->
+        <!--YoutubeKit-Sample-->
         <scene sceneID="jhk-kY-yyC">
             <objects>
                 <viewController storyboardIdentifier="VideoListViewController" id="xbD-C7-SVt" customClass="VideoListViewController" customModule="YoutubeKit_Sample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="82u-7D-hGP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HeM-C4-I8X">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="HeM-C4-I8X" secondAttribute="bottom" id="98N-n0-pag"/>
+                            <constraint firstItem="6bQ-CJ-lLz" firstAttribute="trailing" secondItem="HeM-C4-I8X" secondAttribute="trailing" id="9CO-E8-jAK"/>
+                            <constraint firstItem="HeM-C4-I8X" firstAttribute="top" secondItem="6bQ-CJ-lLz" secondAttribute="top" id="SFS-D8-nwi"/>
+                            <constraint firstItem="HeM-C4-I8X" firstAttribute="leading" secondItem="6bQ-CJ-lLz" secondAttribute="leading" id="gqU-Mo-CGk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6bQ-CJ-lLz"/>
                     </view>
+                    <navigationItem key="navigationItem" title="YoutubeKit-Sample" id="vhW-MD-dkH"/>
+                    <connections>
+                        <outlet property="videoListView" destination="HeM-C4-I8X" id="i09-07-IJm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aO1-Iy-amF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="123" y="126"/>
+            <point key="canvasLocation" x="1031.8840579710145" y="125.89285714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Zpb-Fy-l8E">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NVp-VB-ftq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XSb-QD-ohA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xbD-C7-SVt" kind="relationship" relationship="rootViewController" id="ic0-bv-JaD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EGp-v5-uvU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="125.89285714285714"/>
         </scene>
     </scenes>
 </document>
