@@ -20,6 +20,7 @@
 		45D5047A224F668E008B6639 /* PlayVideoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D50479224F668E008B6639 /* PlayVideoViewController.storyboard */; };
 		45D5047C224F669A008B6639 /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D5047B224F669A008B6639 /* PlayVideoViewController.swift */; };
 		45D5047E224F66D5008B6639 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D5047D224F66D5008B6639 /* VideoPlayerView.swift */; };
+		45D504862253D3B2008B6639 /* UIImageView+DownLoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D504852253D3B2008B6639 /* UIImageView+DownLoadData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		45D50479224F668E008B6639 /* PlayVideoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlayVideoViewController.storyboard; sourceTree = "<group>"; };
 		45D5047B224F669A008B6639 /* PlayVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
 		45D5047D224F66D5008B6639 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		45D504852253D3B2008B6639 /* UIImageView+DownLoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownLoadData.swift"; sourceTree = "<group>"; };
 		6AD0C34B942DC3BFC0DB6642 /* Pods_YoutubeKit_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutubeKit_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 		454B6DB2224BDD9C00BC1548 /* YoutubeKit-Sample */ = {
 			isa = PBXGroup;
 			children = (
+				45D504842253D375008B6639 /* Extention */,
 				45D50463224F6421008B6639 /* VideoListVC */,
 				45D50464224F642D008B6639 /* PlayVideoVC */,
 				45D50465224F649E008B6639 /* Other */,
@@ -154,6 +157,14 @@
 				45D5047D224F66D5008B6639 /* VideoPlayerView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		45D504842253D375008B6639 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				45D504852253D3B2008B6639 /* UIImageView+DownLoadData.swift */,
+			);
+			path = Extention;
 			sourceTree = "<group>";
 		};
 		B0DE301D168C4332216D7D0D /* Pods */ = {
@@ -291,6 +302,7 @@
 			files = (
 				45D5045C224D18F6008B6639 /* VideoPlayerController.swift in Sources */,
 				45D5046E224F656A008B6639 /* VideoListViewController.swift in Sources */,
+				45D504862253D3B2008B6639 /* UIImageView+DownLoadData.swift in Sources */,
 				454B6DB4224BDD9C00BC1548 /* AppDelegate.swift in Sources */,
 				45D5047C224F669A008B6639 /* PlayVideoViewController.swift in Sources */,
 				45D5047E224F66D5008B6639 /* VideoPlayerView.swift in Sources */,
