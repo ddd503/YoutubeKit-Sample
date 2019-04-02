@@ -21,7 +21,7 @@ final class VideoListDataStore {
         // Get youtube chart ranking
         let request = VideoListRequest(part: [.id, .snippet, .contentDetails, .status, .statistics],
                                        filter: .chart,
-                                       maxResults: 10)
+                                       maxResults: 30)
 
         // Send a request.
         ApiSession.shared.send(request) { [weak self] result in
