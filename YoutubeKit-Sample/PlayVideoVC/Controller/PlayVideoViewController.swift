@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import YoutubeKit
 
 final class PlayVideoViewController: UIViewController {
 
@@ -17,11 +18,32 @@ final class PlayVideoViewController: UIViewController {
         return vc
     }
 
-    var videoId = ""
+    private var videoId = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupVideoPlayer()
+    }
 
+    private func setupVideoPlayer() {
+        let videoPlayer = YTSwiftyPlayer(frame: CGRect(x: 0,
+                                                       y: 0,
+                                                       width: self.view.bounds.size.width,
+                                                       height: self.view.bounds.size.height),
+                                         playerVars: [.videoID(videoId)])
+        // Enable auto playback when video is loaded
+        videoPlayer.autoplay = true
+
+        // Set player view.
+        view = videoPlayer
+
+        // Set delegate for detect callback information from the player.
+        videoPlayer.delegate = self
+
+        // Load the video.
+        videoPlayer.loadPlayer()
     }
     
 }
+
+extension PlayVideoViewController: YTSwiftyPlayerDelegate {}
