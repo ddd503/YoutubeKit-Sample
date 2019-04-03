@@ -20,6 +20,12 @@ final class VideoListViewController: UIViewController {
         setup()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        deselectRow()
+    }
+
+
     private func setup() {
         videoListView.register(VideoListViewCell.nib(), forCellReuseIdentifier: VideoListViewCell.identifier)
         videoListView.tableFooterView = UIView()
@@ -28,6 +34,12 @@ final class VideoListViewController: UIViewController {
         dataStore.delegate = self
         // データソースのリクエスト
         dataStore.request()
+    }
+
+    private func deselectRow() {
+        if let indexPathForSelectedRow = videoListView.indexPathForSelectedRow {
+            videoListView.deselectRow(at: indexPathForSelectedRow, animated: true)
+        }
     }
 
 }
@@ -62,4 +74,12 @@ extension VideoListViewController: UITableViewDataSource {
     }
 }
 
-extension VideoListViewController: UITableViewDelegate {}
+extension VideoListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let playVideoVC = PlayVideoViewController.make() {
+            present(playVideoVC, animated: true)
+        } else {
+            deselectRow()
+        }
+    }
+}
