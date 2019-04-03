@@ -20,9 +20,7 @@ extension UIImageView {
         let config = URLSessionConfiguration.default
         config.requestCachePolicy = .returnCacheDataElseLoad
 
-        let session = URLSession(configuration: config)
-
-        session.dataTask(with: url) { [weak self] (data, response, error) in
+        URLSession(configuration: config).dataTask(with: url) { [weak self] (data, response, error) in
             var image: UIImage
 
             if let error = error {

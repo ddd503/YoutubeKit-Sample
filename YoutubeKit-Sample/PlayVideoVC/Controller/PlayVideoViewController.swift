@@ -8,23 +8,17 @@
 
 import UIKit
 
-class PlayVideoViewController: UIViewController {
+final class PlayVideoViewController: UIViewController {
+
+    class func make() -> PlayVideoViewController? {
+        let storyBoard = UIStoryboard(name: String(describing: PlayVideoViewController.self), bundle: .main)
+        let vc = storyBoard.instantiateInitialViewController() as? PlayVideoViewController
+        return vc
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
