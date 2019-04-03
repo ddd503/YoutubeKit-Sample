@@ -10,11 +10,14 @@ import UIKit
 
 final class PlayVideoViewController: UIViewController {
 
-    class func make() -> PlayVideoViewController? {
+     class func make(videoId: String) -> PlayVideoViewController? {
         let storyBoard = UIStoryboard(name: String(describing: PlayVideoViewController.self), bundle: .main)
         let vc = storyBoard.instantiateInitialViewController() as? PlayVideoViewController
+        vc?.videoId = videoId
         return vc
     }
+
+    var videoId = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()

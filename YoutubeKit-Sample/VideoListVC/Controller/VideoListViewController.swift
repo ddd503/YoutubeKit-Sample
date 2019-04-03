@@ -76,7 +76,7 @@ extension VideoListViewController: UITableViewDataSource {
 
 extension VideoListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let playVideoVC = PlayVideoViewController.make() {
+        if let playVideoVC = PlayVideoViewController.make(videoId: videoList[indexPath.row].id) {
             present(playVideoVC, animated: true)
         } else {
             deselectRow()
