@@ -17,9 +17,41 @@
                     <view key="view" contentMode="scaleToFill" id="TuG-sI-BNn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TQQ-3c-d3W">
+                                <rect key="frame" x="0.0" y="44" width="414" height="537.5"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nav-ca-DT4">
+                                <rect key="frame" x="107" y="706.5" width="200" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="076-Sd-SyB"/>
+                                    <constraint firstAttribute="height" constant="100" id="dUC-bE-jLB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="閉じる">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="back:" destination="Avg-Vb-V3g" eventType="touchUpInside" id="Rw4-H6-VNb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Nav-ca-DT4" firstAttribute="centerX" secondItem="TuG-sI-BNn" secondAttribute="centerX" id="A9Q-rS-KEq"/>
+                            <constraint firstItem="TQQ-3c-d3W" firstAttribute="height" secondItem="TuG-sI-BNn" secondAttribute="height" multiplier="0.6" id="DHC-rc-rbP"/>
+                            <constraint firstItem="Nav-ca-DT4" firstAttribute="top" secondItem="TQQ-3c-d3W" secondAttribute="bottom" constant="125" id="Xja-Hp-Rlj"/>
+                            <constraint firstItem="TQQ-3c-d3W" firstAttribute="top" secondItem="87V-cs-g48" secondAttribute="top" id="Xr2-xY-dgr"/>
+                            <constraint firstItem="TQQ-3c-d3W" firstAttribute="width" secondItem="TuG-sI-BNn" secondAttribute="width" id="kO1-S8-ZX7"/>
+                            <constraint firstItem="TQQ-3c-d3W" firstAttribute="centerX" secondItem="TuG-sI-BNn" secondAttribute="centerX" id="s22-Lt-tRa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="87V-cs-g48"/>
                     </view>
+                    <connections>
+                        <outlet property="playerView" destination="TQQ-3c-d3W" id="L0n-Rj-9R3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0VE-xy-FZY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
