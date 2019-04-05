@@ -1,5 +1,5 @@
 # YoutubeKit-Sample
-YoutubeKitを使ってみるためのサンプル
+[YoutubeKit](https://github.com/rinov/YoutubeKit)を使ってみるためのサンプル
 
 <img src="https://raw.githubusercontent.com/ddd503/Image-Resource/master/youtubeKit_1.png" width="150">  <img src="https://raw.githubusercontent.com/ddd503/Image-Resource/master/youtubeKit_2.png" width="150">
 
